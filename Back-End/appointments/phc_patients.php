@@ -73,6 +73,7 @@ session_start();
 <body class="container">
 <h1><center>View Patients Appointment</center></h1><br>
 <br>
+<p align="center"><a href="../../Front-End/UI_PHC/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></p>
 <?php
 $userid=$_SESSION['id'];
 $sql3 = "SELECT * FROM appointment_phc where phc_id = '$userid'";
@@ -138,7 +139,5 @@ $classname="";
 ?>
 
 
-</table>
-</form>
 </body>
 </html>
