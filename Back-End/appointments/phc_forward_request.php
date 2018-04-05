@@ -48,5 +48,35 @@ session_start();
 </select><br>
 <input class = "btn waves-effect waves-teal" type="submit" name="submit" value="Apply">
 </form>
+    <br>
+    <br>
+    <h3><center>  Available Specialists </center></h3>
+    <br>
+    <br>
+    <table class="striped">
+            <tr class="">
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Specialists</td>
+            </tr>
+            <?php
+                $query1 = "SELECT Name,Email,Phone,Speciality FROM cms_details";
+                $retval1 = mysqli_query( $conn,$query1 );
+                while ($row = mysqli_fetch_array($retval1)) {
+                   echo "<tr>";
+                    $name1 = $row["Name"];
+                    $email = $row["Email"];
+                    $phone = $row["Phone"];
+                    $spec = $row["Speciality"];
+                   echo "<td>".$name1."</td>";
+                   echo "<td>".$email."</td>";
+                   echo "<td>".$phone."</td>";
+                   echo "<td>".$spec."</td>";
+                   echo "</tr>";
+               }
+
+            ?>
+        </table>
 </body>
 </html>

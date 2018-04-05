@@ -7,7 +7,6 @@ session_start();
     date_default_timezone_set("Asia/Kolkata");
 }
  $time=new DateTime;
- //$time2=$time->format('Y-m-d');
  $time2=$time->format('Y-m-d H:i:s');
 
    $conn = new mysqli("localhost",$user,$passkey,$db);
