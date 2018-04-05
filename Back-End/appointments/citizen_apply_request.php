@@ -76,5 +76,7 @@ session_start();
 
             ?>
         </table>
+<br/>
+<center><a href="../../Front-End/UI_Citizen/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
 </body>
 </html>
