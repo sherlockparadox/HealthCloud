@@ -107,7 +107,7 @@ $classname="";
     $var = 'disabled';
   }
 ?>
-<td><?php echo $i+1?></td>
+<td><?php echo $i?></td>
 <td><?php echo $row1["citizen_id"];?></td>
 <td><?php echo $row1["approval_status"]; ?></td>
 
