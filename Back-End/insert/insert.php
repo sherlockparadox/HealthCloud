@@ -9,7 +9,7 @@ session_start();
    
      die('Could not connect: ' . mysqli_error()); }
 
-   if (isset($_POST['approve'])) {
+   if (isset($_POST['add_details'])) {
 
      $value1 = $_POST['FIRST_NAME'];
      $value2 = $_POST['MIDDLE_NAME'];
