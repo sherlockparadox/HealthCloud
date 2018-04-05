@@ -3,6 +3,11 @@ session_start();
  $user = "root";
  $passkey = "";
  $db = "healthcloud";
+  if(function_exists('date_default_timezone_set')) {
+    date_default_timezone_set("Asia/Kolkata");
+}
+ $time=new DateTime;
+ $time2=$time->format('Y-m-d H:i:s');
 
    $conn = new mysqli("localhost",$user,$passkey,$db);
    if(! $conn ) { 
@@ -23,7 +28,7 @@ session_start();
    $row = mysqli_fetch_assoc($retval1);
    $docid=$row['username'];
 
-   	$sql = "INSERT INTO appointment_cms(phc_id, cms_id, approval_status)  VALUES ('$userid','$docid','Pending') ";
+   	$sql = "INSERT INTO appointment_cms(phc_id, cms_id, approval_status, time_s)  VALUES ('$userid','$docid','Pending', '$time2') ";
    	$retval = mysqli_query( $conn,$sql ); 
     
    if(! $retval ) { 
@@ -57,6 +62,7 @@ session_start();
 <body class="container">
 <h1><center>Request Appointment</center></h1><br>
 <br>
+<center><a href="../../Front-End/UI_PHC/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
 <?php
 $userid=$_SESSION['id'];
 $sql3 = "SELECT * FROM appointment_cms where phc_id = '$userid'";
@@ -71,6 +77,7 @@ $result = mysqli_query($conn,$sql3 );
 <td>Specialist</td>
 <td>Appointment Status</td>
 <td>Delete Appointment</td>
+<td>Time Stamp</td>
 </tr>
 
 
@@ -93,6 +100,7 @@ $classname="";
 <td><?php echo $doctor?></td>
 <td><?php echo $row1["approval_status"]; ?></td>
 <td><input class = "btn waves-effect waves-teal" type="button" name="delete" value="Delete"  onClick="setDeleteAction();" /></td>
+<td><?php echo $row1["time_s"]; ?></td>
 </tr>
 <?php
 

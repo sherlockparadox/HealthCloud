@@ -4,6 +4,7 @@ session_start();
  $passkey = "";
  $db = "healthcloud";
 
+
    $conn = new mysqli("localhost",$user,$passkey,$db);
    if(! $conn ) { 
    
@@ -60,6 +61,8 @@ session_start();
 <body class="container">
 <h1><center>Scheme Notifications</center></h1><br>
 <br>
+<center><a href="../../Front-End/UI_DAO_Admin/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
+<br>
 <?php
 $userid=$_SESSION['id'];
 $sql3 = "SELECT * FROM scheme_approval";
@@ -73,7 +76,9 @@ $result = mysqli_query($conn,$sql3 );
 <td>S.No.</td>
 <td>Scheme ID</td>
 <td>Status</td>
+<td colspan="2">Time Stamp</td>
 <td colspan=4><center>Action</center></td>
+
 
 </tr>
 
@@ -94,9 +99,11 @@ $classname="";
     $var = 'disabled';
   }
 ?>
-<td><?php echo $i+1?></td>
+<td><?php echo $i?></td>
 <td><?php echo $row1["s_id"];?></td>
 <td><?php echo $row1["Approval_Status"]; ?></td>
+<td><?php echo $row1["time_s"]; ?></td>
+
 
 <td>
   <form method="POST" action="admin.php">
