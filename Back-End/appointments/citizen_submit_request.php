@@ -76,6 +76,7 @@ session_start();
 </head>
 <body class="container">
 <center><h1>Request Appointment</h1></center><br><br>
+<p align="center"><a href="../../Front-End/UI_Citizen/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></p>
 <center>
 <?php
 $userid=$_SESSION['id'];
@@ -85,7 +86,7 @@ $result = mysqli_query($conn,$sql3 );
 ?>
 <form name="frmUser" method="post" action="">
 <div style="width:500px;">
-<center><table class="striped">
+<table class="striped">
 <tr>
 <td>S.No.</td>
 <td>Doctor</td>
@@ -110,7 +111,7 @@ $classname="";
   $doctor = $doc_query["Name"];
   $i++;
 ?>
-<td><?php echo $i+1?></td>
+<td><?php echo $i?></td>
 <td><?php echo $doctor?></td>
 <td><?php echo $row1["approval_status"]; ?></td>
 <td>
@@ -128,11 +129,7 @@ $classname="";
 
 
 </table>
-</center>
 </form>
 </center>
-<h3> </h3>
-<br/>
-<center><a href="../../Front-End/UI_Citizen/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
 </body>
 </html>
