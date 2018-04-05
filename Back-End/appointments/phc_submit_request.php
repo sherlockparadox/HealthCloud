@@ -3,6 +3,9 @@ session_start();
  $user = "root";
  $passkey = "";
  $db = "healthcloud";
+  if(function_exists('date_default_timezone_set')) {
+    date_default_timezone_set("Asia/Kolkata");
+}
  $time=new DateTime;
  $time2=$time->format('Y-m-d H:i:s');
 
