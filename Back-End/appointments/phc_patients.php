@@ -128,6 +128,7 @@ $classname="";
     <input type="hidden" name="forward" value="<?php echo $row1["citizen_id"];?>"/>
     <input class = "btn waves-effect waves-teal" type="submit" name="for" value="Forward">
   </form>
+<td><?php echo $row1["time_s"]; ?></td>
 </td>
 
 </tr>
