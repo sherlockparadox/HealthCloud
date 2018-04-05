@@ -76,6 +76,7 @@ session_start();
 </head>
 <body class="container">
 <center><h1>Request Appointment</h1></center><br><br>
+<center>
 <?php
 $userid=$_SESSION['id'];
 $sql3 = "SELECT * FROM appointment_phc where citizen_id = '$userid'";
@@ -129,5 +130,9 @@ $classname="";
 </table>
 </center>
 </form>
+</center>
+<h3> </h3>
+<br/>
+<center><a href="../../Front-End/UI_Citizen/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
 </body>
 </html>
