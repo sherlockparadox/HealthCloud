@@ -3,6 +3,8 @@ session_start();
  $user = "root";
  $passkey = "";
  $db = "healthcloud";
+ $time=new DateTime;
+ $time2=$time->format('Y-m-d H:i:s');
 
    $conn = new mysqli("localhost",$user,$passkey,$db);
    if(! $conn ) { 
@@ -23,7 +25,7 @@ session_start();
    $row = mysqli_fetch_assoc($retval1);
    $docid=$row['username'];
 
-   	$sql = "INSERT INTO appointment_cms(phc_id, cms_id, approval_status)  VALUES ('$userid','$docid','Pending') ";
+   	$sql = "INSERT INTO appointment_cms(phc_id, cms_id, approval_status, time_s)  VALUES ('$userid','$docid','Pending','$time2') ";
    	$retval = mysqli_query( $conn,$sql ); 
     
    if(! $retval ) { 
@@ -79,6 +81,7 @@ $classname="oddRow";
 <td><?php echo $doctor?></td>
 <td><?php echo $row1["approval_status"]; ?></td>
 <td colspan="4"><input type="button" name="delete" value="Delete"  onClick="setDeleteAction();" /></td>
+<td><?php echo $row1["time_s"]; ?></td>
 </tr>
 <?php
 
