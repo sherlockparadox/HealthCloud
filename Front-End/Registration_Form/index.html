@@ -20,7 +20,7 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
     
-<form name="add_details" action="../../Back-End/insert/insert.php" method="POST">    
+    
   <div class="container">
   <div class="wizard" id="myWizard">
     <section>
@@ -64,14 +64,19 @@
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 20%;"> </div>
       </div>
     </div>
+
+<form name="add_details" action="../../Back-End/insert/insert.php" method="POST">
+
     <div class="tab-content">
       <div class="tab-pane fade in active" id="create-records">
 
+    
+          
         <section>
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="name--first"> First Name<span class="required">*</span></label>
+                <label class="control-label" for="name--first"> First Name<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="name__first">
               </div>
             </div>
@@ -87,7 +92,7 @@
 
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="name--last"> Last Name <span class="required">*</span></label>
+                <label class="control-label" for="name--last"> Last Name <span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="name__last">
               </div>
             </div>
@@ -122,7 +127,7 @@
 
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="mstatus">Marital Status<span class="required">*</span></label>
+                <label class="control-label" for="mstatus">Marital Status<span class="">*</span></label>
                 <select class="form-control input-sm" id="mstatus">
                   <option value="">Married</option>
                   <option value="">Unmarried</option>
@@ -149,7 +154,7 @@
 
             <div class="col-sm-6">
               <div class="form-group">
-                <label class="control-label" for="cnum">Contact Number<span class="required">*</span></label>
+                <label class="control-label" for="cnum">Contact Number<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="cnum">
               </div>
             </div>
@@ -176,7 +181,7 @@
 
             <div class="col-sm-3">
               <div class="form-group">
-                <label class="control-label" for="city">City<span class="required">*</span></label>
+                <label class="control-label" for="city">City<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="city">
               </div>
             </div>
@@ -186,7 +191,7 @@
             <div class="col-sm-3">
               <!-- ================= state ================= -->
               <div class="form-group">
-                <label class="control-label" for="country">State<span class="required">*</span></label>
+                <label class="control-label" for="country">State<span class="">*</span></label>
                 <select class="form-control input-sm" id="state">
                   <option>Rajasthan</option>
                   <option>Tamil Nadu</option>
@@ -199,7 +204,7 @@
             <div class="col-sm-12">
               <!-- ================= address ================= -->
               <div class="form-group">
-                <label class="control-label" for="address">Permanent Address<span class="required">*</span></label>
+                <label class="control-label" for="address">Permanent Address<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="address" />
               </div>
             </div>
@@ -248,7 +253,7 @@
 
             <div class="col-sm-6">
               <div class="form-group">
-                <label class="control-label" for="email">Email<span class="required">*</span></label>
+                <label class="control-label" for="email">Email<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="email">
               </div>
             </div>
@@ -256,7 +261,7 @@
 
             <div class="col-sm-6">
               <div class="form-group">
-                <label class="control-label" for="edu">Education Details<span class="required">*</span></label>
+                <label class="control-label" for="edu">Education Details<span class="">*</span></label>
                 <input type="text" class="form-control input-sm" id="edu">
                 <button class="help-block btn btn-link btn-sm pull-right" type="button" data-toggle="collapse" data-target="#edu-manual" aria-expanded="false" aria-controls="edu-manual">Add Education Details.</button>
               </div>
@@ -600,7 +605,7 @@
             <div class="alerts__text">
               <span class="alerts__type">Success: </span>Entry Successful!
             </div>
-            <input type="submit" class="btn btn-primary btn-sm next">
+            <input type="submit" class="btn btn-primary btn-sm next" value="submit">
 
           </div>
         </section>
@@ -612,9 +617,9 @@
 </section>
 </div>
 </div>
-</div>
-</div>
 </form>
+</div>
+</div>
 
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
