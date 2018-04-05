@@ -60,6 +60,8 @@ session_start();
 <body class="container">
 <h1><center>View Schemes</center></h1><br>
 <br>
+<center><a href="../../Front-End/UI_DAO_Staff/index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Home</a></center>
+<br>
 <?php
 $userid=$_SESSION['id'];
 $sql3 = "SELECT * FROM scheme_govt";
