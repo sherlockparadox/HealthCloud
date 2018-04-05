@@ -4,6 +4,7 @@ session_start();
  $passkey = "";
  $db = "healthcloud";
 
+
    $conn = new mysqli("localhost",$user,$passkey,$db);
    if(! $conn ) { 
    
@@ -73,7 +74,9 @@ $result = mysqli_query($conn,$sql3 );
 <td>S.No.</td>
 <td>Scheme ID</td>
 <td>Status</td>
+<td colspan="2">Time Stamp</td>
 <td colspan=4><center>Action</center></td>
+
 
 </tr>
 
@@ -94,9 +97,11 @@ $classname="";
     $var = 'disabled';
   }
 ?>
-<td><?php echo $i+1?></td>
+<td><?php echo $i?></td>
 <td><?php echo $row1["s_id"];?></td>
 <td><?php echo $row1["Approval_Status"]; ?></td>
+<td><?php echo $row1["time_s"]; ?></td>
+
 
 <td>
   <form method="POST" action="admin.php">

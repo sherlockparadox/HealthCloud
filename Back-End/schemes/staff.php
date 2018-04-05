@@ -3,6 +3,11 @@ session_start();
  $user = "root";
  $passkey = "";
  $db = "healthcloud";
+ if(function_exists('date_default_timezone_set')) {
+    date_default_timezone_set("Asia/Kolkata");
+}
+ $time=new DateTime;
+ $time2=$time->format('Y-m-d H:i:s');
 
    $conn = new mysqli("localhost",$user,$passkey,$db);
    if(! $conn ) { 
@@ -20,7 +25,7 @@ session_start();
       die('Could not get data: ' . mysqli_error()); 
     }
     
-    $sql2 = "INSERT INTO scheme_approval(s_id, a_id, Approval_Status) VALUES ('".$scheme."', 'daoa', 'Pending')";
+    $sql2 = "INSERT INTO scheme_approval(s_id, a_id, Approval_Status, time_s) VALUES ('".$scheme."', 'daoa', 'Pending', '$time2')";
     $retval2 = mysqli_query( $conn,$sql2 );
 
     if(! $retval2 ) { 
