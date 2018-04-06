@@ -14,6 +14,11 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script>
+        function entry_success() {
+        alert("Patient Record Added!");
+        }
+</script>
 </head>
 <body>
       <!--Import jQuery before materialize.js-->
@@ -76,8 +81,8 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="name--first"> First Name<span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="name__first">
+                <label class="control-label" for="FIRST_NAME"> First Name<span class="">*</span></label>
+                <input type="text" class="form-control input-sm" id="FIRST_NAME" name="FIRST_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -85,7 +90,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="name--middle"> Middle Name</label>
-                <input type="text" class="form-control input-sm" id="name__last">
+                <input type="text" class="form-control input-sm" id="name__last" name="MIDDLE_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -93,7 +98,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="name--last"> Last Name <span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="name__last">
+                <input type="text" class="form-control input-sm" id="name__last" name="LAST_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -101,10 +106,10 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="gender">Gender</label>
-                <select class="form-control input-sm" id="gender">
-                  <option value="">Male</option>
-                  <option value="">Female</option>
-                  <option value="">Other</option>
+                <select class="form-control input-sm" id="gender" name="GENDER">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -112,7 +117,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="dob">Date of Birth</label>
-                <input type="text" class="js-single-daterange form-control input-sm" id="dob" />
+                <input type="text" class="js-single-daterange form-control input-sm" id="dob" name="DATE_OF_BIRTH">
               </div>
             </div>
             <!-- / end col -->
@@ -120,7 +125,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="name--guardian"> Parent/Guardian Name</label>
-                <input type="text" class="form-control input-sm" id="name__guardian">
+                <input type="text" class="form-control input-sm" id="name__guardian" name="PARENT_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -128,9 +133,9 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="mstatus">Marital Status<span class="">*</span></label>
-                <select class="form-control input-sm" id="mstatus">
-                  <option value="">Married</option>
-                  <option value="">Unmarried</option>
+                <select class="form-control input-sm" id="mstatus" name="MARITAL_STATUS">
+                  <option value="Married">Married</option>
+                  <option value="Unmarried">Unmarried</option>
                 </select>
               </div>
             </div>
@@ -139,7 +144,7 @@
             <div class="col-sm-8">
               <div class="form-group">
                 <label class="control-label" for="name--spouse"> Spouse Name</label>
-                <input type="text" class="form-control input-sm" id="name__spouse">
+                <input type="text" class="form-control input-sm" id="name__spouse" name="SPOUSE_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -147,7 +152,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="num_children">Number of Children(if any)</label>
-                <input type="text" class="form-control input-sm" id="num_children">
+                <input type="text" class="form-control input-sm" id="num_children" name="NUMBER_OF_CHILDREN">
               </div>
             </div>
             <!-- / end col -->
@@ -155,7 +160,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="cnum">Contact Number<span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="cnum">
+                <input type="text" class="form-control input-sm" id="cnum" name="CONTACT_NUMBER">
               </div>
             </div>
             <!-- / end col -->
@@ -163,9 +168,9 @@
             <div class="col-sm-2">
               <div class="form-group">
                 <label class="control-label" for="phone-type">Phone Type</label>
-                <select class="form-control input-sm" id="phone-type">
-                  <option value="">Mobile</option>
-                  <option value="">Home</option>
+                <select class="form-control input-sm" id="phone-type" name="PHONE_TYPE">
+                  <option value="Mobile">Mobile</option>
+                  <option value="Home">Home</option>
                 </select>
               </div>
             </div>
@@ -174,7 +179,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="altphone">Alternate Phone</label>
-                <input type="phone" class="form-control input-sm" id="phone">
+                <input type="phone" class="form-control input-sm" id="phone" name="ALTERNATE_PHONE">
               </div>
             </div>
             <!-- / end col -->
@@ -182,7 +187,7 @@
             <div class="col-sm-3">
               <div class="form-group">
                 <label class="control-label" for="city">City<span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="city">
+                <input type="text" class="form-control input-sm" id="city" name="CITY">
               </div>
             </div>
             <!-- / end col -->
@@ -192,7 +197,7 @@
               <!-- ================= state ================= -->
               <div class="form-group">
                 <label class="control-label" for="country">State<span class="">*</span></label>
-                <select class="form-control input-sm" id="state">
+                <select class="form-control input-sm" id="state" name="STATE">
                   <option>Rajasthan</option>
                   <option>Tamil Nadu</option>
                   <option>Uttar Pradesh</option>
@@ -205,7 +210,7 @@
               <!-- ================= address ================= -->
               <div class="form-group">
                 <label class="control-label" for="address">Permanent Address<span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="address" />
+                <input type="text" class="form-control input-sm" id="address" name="PERMANENT_ADDRESS">
               </div>
             </div>
             <!-- / end col -->
@@ -254,7 +259,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="email">Email<span class="">*</span></label>
-                <input type="text" class="form-control input-sm" id="email">
+                <input type="text" class="form-control input-sm" id="email" name="EMAIL">
               </div>
             </div>
             <!-- / end col -->
@@ -277,7 +282,7 @@
                     <!-- ================= address ================= -->
                     <div class="form-group">
                       <label class="control-label" for="edu_detail">Education</label>
-                      <textarea class="form-control input-sm" rows="3" id="edu_detail"></textarea>
+                      <textarea class="form-control input-sm" rows="3" id="edu_detail" name="EDUCATION_DETAILS"></textarea>
                     </div>
                   </div>
                   <!-- / end col -->
@@ -306,21 +311,21 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="emergency--name"> Name</label>
-                <input type="text" class="form-control input-sm" id="emergency--name">
+                <input type="text" class="form-control input-sm" id="emergency--name" name="MI_NAME">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="emergency--phone"> Phone</label>
-                <input type="text" class="form-control input-sm" id="emergency--phone">
+                <input type="text" class="form-control input-sm" id="emergency--phone" name="MI_PHONE">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-xs-12">
                     <div class="form-group">
                       <label class="control-label" for="emergency--address">Address</label>
-                      <textarea class="form-control input-sm" rows="3" id="emergency__address"></textarea>
+                      <textarea class="form-control input-sm" rows="3" id="emergency__address" name="MI_ADDRESS"></textarea>
                     </div>
                   </div>
                   <!-- / end col -->
@@ -330,35 +335,35 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="height">Height</label>
-                <input type="text" class="form-control input-sm" id="height">
+                <input type="text" class="form-control input-sm" id="height" name="MI_HEIGHT">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="weight">Weight</label>
-                <input type="text" class="form-control input-sm" id="weight">
+                <input type="text" class="form-control input-sm" id="weight" name="MI_WEIGHT">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="blood">Blood Group</label>
-                <input type="text" class="form-control input-sm" id="blood">
+                <input type="text" class="form-control input-sm" id="blood" name="MI_BLOOD_GROUP">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="fhistory">Family Health History</label>
-                <input type="text" class="form-control input-sm" id="fhistory">
+                <input type="text" class="form-control input-sm" id="fhistory" name="MI_FAMILY_HEALTH_HISTORY">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="mhistory">Medical History</label>
-                <input type="text" class="form-control input-sm" id="mhistory">
+                <input type="text" class="form-control input-sm" id="mhistory" name="MI_MEDICAL_HISTORY">
               </div>
             </div>
             <!-- / end col -->
@@ -369,7 +374,7 @@
               
               <div class="form-group">
                 <label class="control-label" for="allergies">Allergies</label>
-                <input type="text" class="form-control input-sm" id="allergies" />
+                <input type="text" class="form-control input-sm" id="allergies" name="MI_ALLERGIES">
                 </select>
               </div>
             </div>
@@ -379,14 +384,14 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="surgeries">Surgeries</label>
-                <input type="text" class="form-control input-sm" id="surgeries" />
+                <input type="text" class="form-control input-sm" id="surgeries" name="MI_SURGERIES">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="vaccines">Vaccines</label>
-                <input type="text" class="form-control input-sm" id="vaccines" />
+                <input type="text" class="form-control input-sm" id="vaccines" name="MI_VACCINES">
               </div>
             </div>
             <!-- / end col -->
@@ -396,28 +401,28 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="provider">Insurance Provider</label>
-                <input type="text" class="form-control input-sm" id="provider" />
+                <input type="text" class="form-control input-sm" id="provider" name="MI_INSURANCE_PROVIDER">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="grp-name">Group Name</label>
-                <input type="text" class="form-control input-sm" id="grp-name" />
+                <input type="text" class="form-control input-sm" id="grp-name" name="MI_GROUP_NAME">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-xs-12">
                     <div class="form-group">
                       <label class="control-label" for="insuranceadd">Address</label>
-                      <textarea class="form-control input-sm" rows="3" id="insuranceadd"></textarea>
+                      <textarea class="form-control input-sm" rows="3" id="insuranceadd" name="MI_II_ADDRESS"></textarea>
                     </div>
                   </div>
                   <!-- / end col -->
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="policy">Policy Name</label>
-                <input type="text" class="form-control input-sm" id="policy" />
+                <input type="text" class="form-control input-sm" id="policy" name="MI_POLICY_NAME">
               </div>
             </div>
             <!-- / end col -->
@@ -441,49 +446,49 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="occupation"> Occupation</label>
-                <input type="text" class="form-control input-sm" id="occupation">
+                <input type="text" class="form-control input-sm" id="occupation" name="OCCUPATION">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="cname"> Company Name</label>
-                <input type="text" class="form-control input-sm" id="cname">
+                <input type="text" class="form-control input-sm" id="cname" name="COMPANY_NAME">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="empid">Employee ID</label>
-                <input type="text" class="form-control input-sm" id="empid">
+                <input type="text" class="form-control input-sm" id="empid" name="EMPLOYEE_ID">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-4">
               <div class="form-group">
                 <label class="control-label" for="worktime">Worked Since</label>
-                <input type="text" class="form-control input-sm" id="worktime">
+                <input type="text" class="form-control input-sm" id="worktime" name="WORKED_SINCE">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="offadd">Office Address</label>
-                <input type="text" class="form-control input-sm" id="offadd">
+                <input type="text" class="form-control input-sm" id="offadd" name="OFFICE_ADDRESS">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="offph">Office Phone</label>
-                <input type="text" class="form-control input-sm" id="offph">
+                <input type="text" class="form-control input-sm" id="offph" name="OFFICE_PHONE">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="income">Annual Income</label>
-                <input type="text" class="form-control input-sm" id="income">
+                <input type="text" class="form-control input-sm" id="income" name="ANNUAL_INCOME">
               </div>
             </div>
             <!-- / end col -->
@@ -493,7 +498,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="pan">PAN Number</label>
-                <input type="text" class="form-control input-sm" id="pan" />
+                <input type="text" class="form-control input-sm" id="pan" name="PAN_NUMBER">
                 </select>
               </div>
             </div>
@@ -503,7 +508,7 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="schemes">Governmental Schemes Enrolled (if any)</label>
-                <input type="text" class="form-control input-sm" id="schemes" />
+                <input type="text" class="form-control input-sm" id="schemes" name="GOVERNMENT_SCHEMES_ENROLLED">
               </div>
             </div>
             <!-- / end col -->
@@ -513,56 +518,56 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="accholdername">Account Holder Name</label>
-                <input type="text" class="form-control input-sm" id="accholdername" />
+                <input type="text" class="form-control input-sm" id="accholdername" name="ACCOUNT_HOLDER_NAME">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="accnumber">Account Number</label>
-                <input type="text" class="form-control input-sm" id="accnumber" />
+                <input type="text" class="form-control input-sm" id="accnumber" name="ACCOUNT_NUMBER">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="bankname">Bank Name</label>
-                <input type="text" class="form-control input-sm" id="bankname" />
+                <input type="text" class="form-control input-sm" id="bankname" name="BANK_NAME">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="ifsc">IFSC Code</label>
-                <input type="text" class="form-control input-sm" id="ifsc" />
+                <input type="text" class="form-control input-sm" id="ifsc" name="IFSC_CODE">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="branch">Branch</label>
-                <input type="text" class="form-control input-sm" id="branch" />
+                <input type="text" class="form-control input-sm" id="branch" name="BRANCH">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="bankadd">Bank Address</label>
-                <input type="text" class="form-control input-sm" id="bankadd" />
+                <input type="text" class="form-control input-sm" id="bankadd" name="BANK_ADDRESS">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="bankstate">Bank State</label>
-                <input type="text" class="form-control input-sm" id="bankstate" />
+                <input type="text" class="form-control input-sm" id="bankstate" name="BANK_STATE">
               </div>
             </div>
             <!-- / end col -->
             <div class="col-sm-6">
               <div class="form-group">
                 <label class="control-label" for="bankdis">Bank District</label>
-                <input type="text" class="form-control input-sm" id="bankdis" />
+                <input type="text" class="form-control input-sm" id="bankdis" name="BANK_DISTRICT">
               </div>
             </div>
             <!-- / end col -->
@@ -585,7 +590,7 @@
             <div class="col-sm-12">
               <div class="form-group">
                 <label class="control-label" for="start-date">Biometric Input</label>
-                <input type="text" class="js-single-daterange form-control input-sm" id="start-date" />
+                <input type="text" class="js-single-daterange form-control input-sm" id="start-date" name="BIOMETRIC_INPUT">
               </div>
             </div>
             <!-- / end col -->
@@ -605,7 +610,7 @@
             <div class="alerts__text">
               <span class="alerts__type">Success: </span>Entry Successful!
             </div>
-            <input type="submit" class="btn btn-primary" value="Submit" name="Submit">
+            <input type="submit" class="btn btn-primary" value="Submit" name="Submit" onclick="entry_success();">
 
           </div>
         </section>
