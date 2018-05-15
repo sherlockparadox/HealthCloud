@@ -13,6 +13,6 @@
 * GPO - Register new patient / view list
 * DAO/PHC/CMS - Apply govt schemes using form.
 
-### Demo : http://grameensashaktikaran.000webhostapp.com/Front-End/Login_Page/login.html
+### Demo : http://grameensashaktikaran.000webhostapp.com/
 
 Ping me for login credentials.
